@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="412.0" prefWidth="608.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spamorhamfx.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="630.0" style="-fx-background-color: #ff7b00;">
+         <children>
+            <Label layoutX="162.0" layoutY="26.0" text="Spam / Ham Classification" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="targetMessage" layoutX="94.0" layoutY="125.0" prefHeight="17.0" prefWidth="443.0" />
+      <Label layoutX="94.0" layoutY="101.0" text="Message:" />
+      <Button fx:id="classifyMessageButton" layoutX="408.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleClassifyButtonAction" prefHeight="25.0" prefWidth="129.0" text="Classify my Message." />
+      <Rectangle fx:id="spamResult" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="36.0" layoutX="94.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
+      <Label layoutX="117.0" layoutY="231.0" text="Spam" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="hamResult" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="36.0" layoutX="448.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
+      <Label layoutX="471.0" layoutY="231.0" text="Ham" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="resultWindow" arcHeight="5.0" arcWidth="5.0" fill="#d4ff1f" height="44.0" layoutX="271.0" layoutY="222.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" width="97.0" />
+      <Button fx:id="accuracyButton" layoutX="93.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleAccuracyButtonAction" prefHeight="25.0" prefWidth="129.0" text="Get Accuracy" />
+      <Label layoutX="379.0" layoutY="388.0" text="Made By: Syed Hammad Jaffery (15K-2890)" />
+   </children>
+</AnchorPane>
